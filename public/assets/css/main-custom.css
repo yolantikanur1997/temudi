@@ -1,0 +1,41 @@
+.is-invalid {
+    border: 1px solid #dc3545 !important; 
+}
+
+.select2-container--default .select2-selection--single.is-invalid,
+select.is-invalid + .select2.select2-container .select2-selection--single {
+    border: 1px solid #dc3545 !important; 
+}
+
+.input-group-text {
+    width: 100px;
+    min-width: 100px;
+    text-align: left;
+    white-space: normal; /* sudah benar */
+    word-break: break-word; /* tambahan penting */
+}
+
+
+ .sticky-save-btn {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    padding: 10px;
+    text-align: right;
+    /* border-bottom: 1px solid #dee2e6; */
+}
+
+.form-label {
+    color: #212529 !important; /* Bootstrap default, lebih soft dari #000 */
+}
+
+
+.redirect-link:hover {
+    font-weight: bold;
+}
+
+.sidebar-wrapper {
+    background: #fff;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+}

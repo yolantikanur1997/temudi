@@ -1,0 +1,29 @@
+body{background-color:#fff}#auth{height:100vh;overflow-x:hidden}#auth #auth-right{height:100%;background:url(../../images/bg/4853433.jpg),linear-gradient(90deg,#2d499d,#3f5491)}#auth #auth-left{padding:0rem 2rem}#auth #auth-left .auth-title{font-size:3rem;margin-bottom:1rem}#auth #auth-left .auth-subtitle{font-size:1.7rem;line-height:2rem;color:#a8aebb}#auth #auth-left .auth-logo{margin-bottom:7rem}#auth #auth-left .auth-logo img{height:2rem}@media screen and (max-width:767px){#auth #auth-left{padding:5rem}}
+
+
+#auth #auth-right{height: 100vh; display: flex; align-items: center; justify-content: center;}
+
+
+.typing-container {
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: white; 
+}
+
+.line1, .line2 {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease forwards;
+    color: white; 
+}
+
+.line2 {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
