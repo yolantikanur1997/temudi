@@ -1,29 +1,46 @@
-body{background-color:#fff}#auth{height:100vh;overflow-x:hidden}#auth #auth-right{height:100%;background:url(../../images/bg/4853433.jpg),linear-gradient(90deg,#2d499d,#3f5491)}#auth #auth-left{padding:0rem 2rem}#auth #auth-left .auth-title{font-size:3rem;margin-bottom:1rem}#auth #auth-left .auth-subtitle{font-size:1.7rem;line-height:2rem;color:#a8aebb}#auth #auth-left .auth-logo{margin-bottom:7rem}#auth #auth-left .auth-logo img{height:2rem}@media screen and (max-width:767px){#auth #auth-left{padding:5rem}}
-
-
-#auth #auth-right{height: 100vh; display: flex; align-items: center; justify-content: center;}
-
-
-.typing-container {
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    color: white; 
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.line1, .line2 {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 1s ease forwards;
-    color: white; 
+.container-fluid {
+  height: 100vh;
 }
 
-.line2 {
-    animation-delay: 1.5s;
+.left { /* Sekarang: FORM LOGIN */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  padding: 30px;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.right { /* Sekarang: TYPING ANIMATION */
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  overflow: hidden;
+  text-align: center;
+}
+
+.typing-text {
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+  min-height: 40px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
 }

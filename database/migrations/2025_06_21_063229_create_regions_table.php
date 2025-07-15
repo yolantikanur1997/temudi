@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('parent_id')->default(0);
-            $table->enum('type',['province','regencys','sub_district']);
+            $table->enum('type',['province','regencys','sub_district'])->index();
             $table->string('name',50);
             $table->string('image')->nullable();
             $table->timestamps();

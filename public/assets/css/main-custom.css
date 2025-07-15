@@ -39,3 +39,19 @@ select.is-invalid + .select2.select2-container .select2-selection--single {
     background: #fff;
     box-shadow: 0 4px 20px 0 rgba(0,0,0,0.10), 0 1.5px 6px 0 rgba(0,0,0,0.08);
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  color: #000 !important;
+  font-weight: 500;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  color: #000 !important;
+  font-weight: 500;
+}

@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="{{asset('assets/vendors/sweetalert2/sweetalert2.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/timepicker/jquery.timepicker.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/select2/dist/css/select2.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/pages/auth.css')}}">
 
 
     @yield('page-style')
