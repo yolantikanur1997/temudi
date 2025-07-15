@@ -30,9 +30,9 @@ class AuthController extends Controller
             return back()->with('failed', 'Akun tidak ditemukan.');
         }
 
-        // if (!$user->is_active) {
-        //     return back()->with('failed', 'Akun Anda belum aktif.');
-        // }
+        if (!$user->email_verified_at) {
+            return back()->with('failed', 'Akun Anda belum aktif. Silahkan melakukan verifikasi melalui email.');
+        }
 
         if (!Auth::attempt($credentials)) {
             return back()->with('failed', 'Email / Password salah.');

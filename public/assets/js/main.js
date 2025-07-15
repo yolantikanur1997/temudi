@@ -207,3 +207,12 @@ function formatPrice() {
 }
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll("input[type='text'], input[type='email'], input[type='password'], textarea");
+
+    inputs.forEach(function (input) {
+      input.addEventListener("focus", function () {
+        this.select();
+      });
+    });
+  });

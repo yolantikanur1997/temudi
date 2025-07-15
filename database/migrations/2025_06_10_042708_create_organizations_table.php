@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('regency_id')->nullable();
             $table->unsignedBigInteger('district_id')->nullable();
             $table->text('address')->nullable();
-            $table->enum('type',['dagang','jasa'])->index();
+            $table->string('type',100)->index();
             $table->boolean('active')->nullable();
             $table->string('logo',200)->nullable();
             $table->decimal('lat',10,8)->nullable();

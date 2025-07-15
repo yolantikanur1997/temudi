@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('master_products', function (Blueprint $table) {
             $table->id();
             $table->string('name',100);
+            $table->string('type',100)->index()->index();
             $table->boolean('active')->default(1);
             $table->unsignedBigInteger('organization_id');
             $table->unsignedBigInteger('created_by');

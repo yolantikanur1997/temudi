@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
               'email'   => 'adminybr@example.com',
               'password'   => bcrypt('test1234'),
               'organization_id'   => 1,
+              'email_verified_at' => now()
             ]
           );
 
@@ -31,6 +32,7 @@ class UserSeeder extends Seeder
               'email'   => 'adminybrstore@example.com',
               'password'   => bcrypt('test1234'),
               'organization_id'   => 2,
+              'email_verified_at' => now()
             ]
           );
 

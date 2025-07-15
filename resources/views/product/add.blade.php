@@ -49,7 +49,7 @@
                                                     <label for="type" class="form-label mb-0">Nama</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <input type="text" class="form-control required" data-required="Nama" name="name" id="name">
+                                                    <input type="text" class="form-control required maxlength" data-max data-required="Nama" name="name" id="name" placeholder="Nama" value="{{ old('name') }}">
                                                 </div>
                                             </div>
 
@@ -78,10 +78,10 @@
                                     <div class="col-lg-6 col-sm-12 mb-3">
                                             <div class="row">
                                                 <div class="col-lg-3">
-                                                    <label for="type" class="form-label mb-0">Price</label>
+                                                    <label for="type" class="form-label mb-0">Harga</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <input type="text" class="form-control required price-format required" data-required="Price" name="price" id="price">
+                                                    <input type="text" class="form-control required price-format" data-required="Harga" name="price" id="price" placeholder="Harga" value="{{old('price')}}">
                                                 </div>
                                             </div>
 
@@ -92,7 +92,7 @@
                                                     <label for="notes" class="form-label mb-0">Notes</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <textarea class="form-control" name="notes" id="notes" rows="3" placeholder="Catatan"></textarea>
+                                                    <textarea class="form-control" name="notes" id="notes" rows="3" placeholder="Catatan">{{old('notes')}}</textarea>
                                                 </div>
                                             </div>
 
