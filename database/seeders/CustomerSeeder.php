@@ -28,6 +28,7 @@ class CustomerSeeder extends Seeder
                    'email' => $faker->email(),
                     'phone_number' => $faker->numerify('08###########'),
                    'active' => 1,
+                   'address' => $faker->address(),
                    'created_by' => 1,
                    'updated_by' => 1,
                ]);

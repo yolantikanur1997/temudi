@@ -126,4 +126,14 @@ class ProductController extends Controller
             return redirect('product')->with('error', 'Produk Gagal di Edit');
         }
     }
+
+     
+    public function searchProduct(Request $request)
+    {
+        $organizationId = session('organization_id'); 
+
+        $products = Product::where('organization_id', $organizationId)->where('active', 1)->get();
+
+        return response()->json($products);
+    }
 }
