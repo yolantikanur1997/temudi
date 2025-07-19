@@ -17,7 +17,8 @@
     
     <script src="{{asset('assets/vendors/datatables/datatables.min.js')}}"></script>
     
-
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="{{asset('assets/vendors/sweetalert2/sweetalert2.all.min.js')}}"></script>
     <script src="{{asset('assets/vendors/fontawesome/all.min.js')}}"></script>
     <script src="{{asset('assets/vendors/timepicker/jquery.timepicker.min.js')}}"></script>

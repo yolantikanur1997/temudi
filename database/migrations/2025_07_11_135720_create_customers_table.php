@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email',100)->nullable();
             $table->string('phone_number',30)->nullable();
             $table->boolean('active')->nullable()->index();
+            $table->text('address')->nullable();
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('updated_by');
             $table->timestamps();

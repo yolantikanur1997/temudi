@@ -70,6 +70,7 @@ function getNotifFailed(message){
         duration: 3000,
         close:true,
         backgroundColor: "red",
+        escapeMarkup: false
     }).showToast();
 }
 
@@ -192,7 +193,7 @@ function formatPrice() {
     var inputPrice = $('.price-format');
 
     // Format input as Rupiah on keyup and input
-    inputPrice.on('input', function () {
+    inputPrice.on('input change keyup', function () {
         var value = $(this).val();
         // Remove all non-digit characters
         value = value.replace(/[^\d]/g, '');
@@ -205,6 +206,23 @@ function formatPrice() {
         }
     });
 }
+function formatPriceVariable(value) {
+    // Jika value number, ubah ke string dulu
+    if (typeof value === "number") {
+        value = Math.round(value).toString();
+    } else {
+        value = value.toString(); // antisipasi kalau null/undefined
+    }
+
+    // Hapus semua karakter non-angka
+    value = value.replace(/[^\d]/g, '');
+    if (!value) return "0";
+
+    // Format ribuan
+    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+
 
 
   document.addEventListener("DOMContentLoaded", function () {

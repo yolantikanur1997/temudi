@@ -6,6 +6,8 @@ use App\Http\Controllers\MasterProductController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\TransactionController;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,12 +37,22 @@ Route::middleware(['auth'])->group(function () {
     Route::post('product/store', [ProductController::class, 'store']);
     Route::get('product/{product}/edit', [ProductController::class, 'edit']);
     Route::post('product/{product}', [ProductController::class, 'update']);
+    Route::get('products/search', [ProductController::class, 'searchProduct'])->name('product.search');
 
     Route::get('customer', [CustomerController::class, 'index']);
     Route::get('customer/create', [CustomerController::class, 'create']);
     Route::post('customer/store', [CustomerController::class, 'store']);
     Route::get('customer/{customer}/edit', [CustomerController::class, 'edit']);
     Route::post('customer/{customer}', [CustomerController::class, 'update']);
+
+    Route::get('transaction', [TransactionController::class, 'index']);
+    Route::get('transaction/create', [TransactionController::class, 'create']);
+    Route::post('transaction/store', [TransactionController::class, 'store']);
+    Route::get('transaction/print',function(){
+        $transaction = Transaction::find(11);
+        return view('transactions.print',compact('transaction'));
+    });
+
 
     Route::post('logout',[AuthController::class,'logout'])->name('logout');
 });

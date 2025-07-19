@@ -24,6 +24,7 @@ class OrganizationSeeder extends Seeder
         Organization::create(
             [
               'name'    => 'PT YBRevolution Indonesia',
+              'code'    => 'YBRI',
               'brand'   => 'YBRevolution',
               'email'   => 'bisnis@ybrevolution.com',
               'phone_number'   => '02139516692',
@@ -47,6 +48,7 @@ class OrganizationSeeder extends Seeder
           Organization::create(
             [
               'name'    => 'PT YBR Store',
+              'code'    => 'YBRS',
               'brand'   => 'YBR Store',
               'phone_number'   => '0894931234523',
               'email'   => 'bisnis@ybrstore.com',

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('organization_id')->index();
+            $table->string('code')->index();
             $table->string('name');
             $table->unsignedBigInteger('master_product_id');
             $table->decimal('price', 10, 2);

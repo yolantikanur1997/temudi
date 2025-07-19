@@ -40,6 +40,7 @@ class ProductSeeder extends Seeder
                 Product::create([
                     'organization_id' => $org->id,
                     'master_product_id' => $master->id,
+                    'code' => $faker->unique()->ean13(),
                     'name' => static::generateExampleProductName($master->name, $faker),
                     'active' => 1,
                     'price' => static::generateExamplePrice($master->name, $faker),
